@@ -18,15 +18,13 @@ npm install @ochub/ui
 ## Quick Start
 
 ```tsx
-import { TopBar, BottomNav, BackButton } from '@ochub/ui';
+import { TopBar, BottomNav, BackButton } from "@ochub/ui";
 
 export function App() {
   return (
     <>
       <TopBar title="Home" />
-      <main>
-        {/* Your content */}
-      </main>
+      <main>{/* Your content */}</main>
       <BottomNav />
     </>
   );
@@ -45,7 +43,7 @@ The theme is **automatically imported** when you import components. All CSS vari
 
 ```tsx
 // Simply import components - theme is auto-applied
-import { BackButton } from '@ochub/ui';
+import { BackButton } from "@ochub/ui";
 
 export function MyComponent() {
   return <BackButton label="Go Back" />;
@@ -77,7 +75,7 @@ Use CSS variables directly in your styles or Tailwind classes:
 Import the theme object for programmatic access:
 
 ```tsx
-import { ochubTheme, type OchubTheme } from '@ochub/ui';
+import { ochubTheme, type OchubTheme } from "@ochub/ui";
 
 // Access colors
 const primaryColor = ochubTheme.colors.primary; // '#141beb'
@@ -120,7 +118,8 @@ const theme: OchubTheme = ochubTheme;
 --color-text-dark: #374151;
 
 /* Typography */
---font-family-poppins: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+--font-family-poppins:
+  "Poppins", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
 ```
 
 ### Customizing Theme Colors
@@ -143,7 +142,7 @@ All components will automatically use your custom colors.
 For explicit theme wrapping (optional, theme is already auto-applied):
 
 ```tsx
-import { ThemeProvider, TopBar } from '@ochub/ui';
+import { ThemeProvider, TopBar } from "@ochub/ui";
 
 export function App() {
   return (
@@ -166,9 +165,9 @@ A navigation button with back arrow icon.
 
 ```typescript
 interface BackButtonProps {
-  label?: string;        // Button text (default: "Back")
-  href?: string;         // Navigate to URL
-  onClick?: () => void;  // Custom click handler
+  label?: string; // Button text (default: "Back")
+  href?: string; // Navigate to URL
+  onClick?: () => void; // Custom click handler
 }
 ```
 
@@ -214,6 +213,7 @@ No props - navigation items are fixed.
 ```
 
 Routes handled:
+
 - `/` - Home (active when pathname is exactly "/")
 - `/grow` - Grow section
 - `/credentials` - Credentials section
@@ -233,20 +233,35 @@ Open Campus logo (wordmark + icon).
 ```tsx
 import { Logo } from '@ochub/ui';
 
-<Logo /> // Fixed size SVG
+<Logo />                           // Default: light variant (white text)
+<Logo variant="dark" />            // Dark variant (blue text for light backgrounds)
+<Logo variant="dark" className="h-6 w-auto" />  // Custom size
 ```
+
+Props:
+
+```typescript
+{
+  variant?: "light" | "dark";  // Text color variant (default: "light")
+  className?: string;           // CSS class for sizing/styling
+}
+```
+
+- `variant="light"` - White text, for dark backgrounds (default)
+- `variant="dark"` - Blue (#141BEB) text, for light backgrounds
 
 #### ArrowLeft
 
 Left arrow icon for back navigation.
 
 ```tsx
-import { ArrowLeft } from '@ochub/ui';
+import { ArrowLeft } from "@ochub/ui";
 
-<ArrowLeft className="h-5 w-5" />
+<ArrowLeft className="h-5 w-5" />;
 ```
 
 Props:
+
 ```typescript
 { className?: string }
 ```
@@ -256,12 +271,13 @@ Props:
 Home icon with active/inactive states.
 
 ```tsx
-import { HomeIcon } from '@ochub/ui';
+import { HomeIcon } from "@ochub/ui";
 
-<HomeIcon className="h-6 w-6" active={true} />
+<HomeIcon className="h-6 w-6" active={true} />;
 ```
 
 Props:
+
 ```typescript
 {
   className?: string;
@@ -274,12 +290,13 @@ Props:
 Growth/trending icon with active/inactive states.
 
 ```tsx
-import { GrowIcon } from '@ochub/ui';
+import { GrowIcon } from "@ochub/ui";
 
-<GrowIcon className="h-6 w-6" active={false} />
+<GrowIcon className="h-6 w-6" active={false} />;
 ```
 
 Props:
+
 ```typescript
 {
   className?: string;
@@ -292,12 +309,13 @@ Props:
 Credentials/badge icon with active/inactive states.
 
 ```tsx
-import { CredentialsIcon } from '@ochub/ui';
+import { CredentialsIcon } from "@ochub/ui";
 
-<CredentialsIcon className="h-6 w-6" active={false} />
+<CredentialsIcon className="h-6 w-6" active={false} />;
 ```
 
 Props:
+
 ```typescript
 {
   className?: string;
@@ -310,12 +328,13 @@ Props:
 Hamburger menu icon.
 
 ```tsx
-import { HamburgerIcon } from '@ochub/ui';
+import { HamburgerIcon } from "@ochub/ui";
 
-<HamburgerIcon className="h-6 w-6" />
+<HamburgerIcon className="h-6 w-6" />;
 ```
 
 Props:
+
 ```typescript
 { className?: string }
 ```
@@ -339,10 +358,10 @@ npx tailwindcss init -p
 // tailwind.config.js
 export default {
   content: [
-    './src/**/*.{js,jsx,ts,tsx}',
-    'node_modules/@ochub/ui/dist/**/*.{js,jsx,ts,tsx}',
+    "./src/**/*.{js,jsx,ts,tsx}",
+    "node_modules/@ochub/ui/dist/**/*.{js,jsx,ts,tsx}",
   ],
-}
+};
 ```
 
 ### 3. Import Tailwind CSS
@@ -362,7 +381,7 @@ export default {
 
 ```tsx
 // app/layout.tsx
-import { AppShell, TopBar } from '@ochub/ui';
+import { AppShell, TopBar } from "@ochub/ui";
 
 export default function RootLayout({ children }) {
   return (
@@ -382,20 +401,20 @@ export default function RootLayout({ children }) {
 
 ```tsx
 // main.tsx
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App.tsx";
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>,
-)
+);
 ```
 
 ```tsx
 // App.tsx
-import { TopBar, BottomNav } from '@ochub/ui';
+import { TopBar, BottomNav } from "@ochub/ui";
 
 function App() {
   return (
@@ -411,7 +430,7 @@ function App() {
 
 ```tsx
 // App.tsx
-import { TopBar, BottomNav } from '@ochub/ui';
+import { TopBar, BottomNav } from "@ochub/ui";
 
 function App() {
   return (
@@ -432,20 +451,15 @@ export default App;
 Full TypeScript support with exported types:
 
 ```tsx
-import { 
-  BackButton,
-  BottomNav,
-  ochubTheme,
-  type OchubTheme,
-} from '@ochub/ui';
+import { BackButton, BottomNav, ochubTheme, type OchubTheme } from "@ochub/ui";
 
 // Type-safe theme
-const colors: OchubTheme['colors'] = ochubTheme.colors;
+const colors: OchubTheme["colors"] = ochubTheme.colors;
 
 // Component props are fully typed
 const backButtonProps: React.ComponentProps<typeof BackButton> = {
   label: "Back",
-  href: "/"
+  href: "/",
 };
 ```
 
