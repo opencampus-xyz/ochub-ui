@@ -1,5 +1,5 @@
 {
-  "name": "@ochub/ui",
+  "name": "@opencampus/ochub-ui",
   "version": "0.1.0",
   "description": "Open Campus UI component library",
   "main": "dist/index.js",
