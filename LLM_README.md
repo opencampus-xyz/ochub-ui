@@ -253,7 +253,41 @@ Design:
 - Blue accent (#141BEB)
 - Used in TopBar
 
-2. # ARROWLEFT
+2. # LOGOICON
+   Location: src/components/icons/LogoIcon.tsx
+   Export: export function LogoIcon
+
+Interface:
+
+```typescript
+interface LogoIconProps {
+  className?: string;
+}
+
+function LogoIcon(props: LogoIconProps): JSX.Element;
+```
+
+Properties:
+
+- Size: 24x24 (default)
+- Circle icon only (no text)
+- SVG viewBox: "0 0 24 24"
+- className: For custom sizing
+
+Usage:
+
+```tsx
+<LogoIcon />                       // Default size
+<LogoIcon className="w-8 h-8" />   // Custom size
+```
+
+Design:
+
+- Cyan circle background (#00EDBE)
+- Blue horizontal bars (#141BEB)
+- Use when wordmark not needed
+
+3. # ARROWLEFT
    Location: src/components/icons/ArrowLeft.tsx
    Export: export function ArrowLeft
 

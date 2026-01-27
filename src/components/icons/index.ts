@@ -4,3 +4,4 @@ export { GrowIcon } from "./GrowIcon";
 export { HamburgerIcon } from "./HamburgerIcon";
 export { HomeIcon } from "./HomeIcon";
 export { Logo } from "./Logo";
+export { LogoIcon } from "./LogoIcon";

@@ -250,6 +250,25 @@ Props:
 - `variant="light"` - White text, for dark backgrounds (default)
 - `variant="dark"` - Blue (#141BEB) text, for light backgrounds
 
+#### LogoIcon
+
+Open Campus logo icon only (circle without text). Use when you need just the icon without the wordmark.
+
+```tsx
+import { LogoIcon } from '@ochub/ui';
+
+<LogoIcon />                       // Default size (24x24)
+<LogoIcon className="w-8 h-8" />   // Custom size
+```
+
+Props:
+
+```typescript
+{
+  className?: string;  // CSS class for sizing/styling
+}
+```
+
 #### ArrowLeft
 
 Left arrow icon for back navigation.
