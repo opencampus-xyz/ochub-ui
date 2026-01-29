@@ -1,4 +1,4 @@
-# @ochub/ui
+# @opencampus/ochub-ui
 
 A pure React component library for Open Campus Hub, providing pre-built, fully themed UI components with automatic theme application.
 
@@ -12,13 +12,13 @@ A pure React component library for Open Campus Hub, providing pre-built, fully t
 ## Installation
 
 ```bash
-npm install @ochub/ui
+npm install @opencampus/ochub-ui
 ```
 
 ## Quick Start
 
 ```tsx
-import { TopBar, BottomNav, BackButton } from "@ochub/ui";
+import { TopBar, BottomNav, BackButton } from "@opencampus/ochub-ui";
 
 export function App() {
   return (
@@ -43,7 +43,7 @@ The theme is **automatically imported** when you import components. All CSS vari
 
 ```tsx
 // Simply import components - theme is auto-applied
-import { BackButton } from "@ochub/ui";
+import { BackButton } from "@opencampus/ochub-ui";
 
 export function MyComponent() {
   return <BackButton label="Go Back" />;
@@ -75,7 +75,7 @@ Use CSS variables directly in your styles or Tailwind classes:
 Import the theme object for programmatic access:
 
 ```tsx
-import { ochubTheme, type OchubTheme } from "@ochub/ui";
+import { ochubTheme, type OchubTheme } from "@opencampus/ochub-ui";
 
 // Access colors
 const primaryColor = ochubTheme.colors.primary; // '#141beb'
@@ -142,7 +142,7 @@ All components will automatically use your custom colors.
 For explicit theme wrapping (optional, theme is already auto-applied):
 
 ```tsx
-import { ThemeProvider, TopBar } from "@ochub/ui";
+import { ThemeProvider, TopBar } from "@opencampus/ochub-ui";
 
 export function App() {
   return (
@@ -231,7 +231,7 @@ All icons accept `className` prop for sizing and styling. Some icons support an 
 Open Campus logo (wordmark + icon).
 
 ```tsx
-import { Logo } from '@ochub/ui';
+import { Logo } from '@opencampus/ochub-ui';
 
 <Logo />                           // Default: light variant (white text)
 <Logo variant="dark" />            // Dark variant (blue text for light backgrounds)
@@ -255,7 +255,7 @@ Props:
 Open Campus logo icon only (circle without text). Use when you need just the icon without the wordmark.
 
 ```tsx
-import { LogoIcon } from '@ochub/ui';
+import { LogoIcon } from '@opencampus/ochub-ui';
 
 <LogoIcon />                       // Default size (24x24)
 <LogoIcon className="w-8 h-8" />   // Custom size
@@ -274,7 +274,7 @@ Props:
 Left arrow icon for back navigation.
 
 ```tsx
-import { ArrowLeft } from "@ochub/ui";
+import { ArrowLeft } from "@opencampus/ochub-ui";
 
 <ArrowLeft className="h-5 w-5" />;
 ```
@@ -290,7 +290,7 @@ Props:
 Home icon with active/inactive states.
 
 ```tsx
-import { HomeIcon } from "@ochub/ui";
+import { HomeIcon } from "@opencampus/ochub-ui";
 
 <HomeIcon className="h-6 w-6" active={true} />;
 ```
@@ -309,7 +309,7 @@ Props:
 Growth/trending icon with active/inactive states.
 
 ```tsx
-import { GrowIcon } from "@ochub/ui";
+import { GrowIcon } from "@opencampus/ochub-ui";
 
 <GrowIcon className="h-6 w-6" active={false} />;
 ```
@@ -328,7 +328,7 @@ Props:
 Credentials/badge icon with active/inactive states.
 
 ```tsx
-import { CredentialsIcon } from "@ochub/ui";
+import { CredentialsIcon } from "@opencampus/ochub-ui";
 
 <CredentialsIcon className="h-6 w-6" active={false} />;
 ```
@@ -347,7 +347,7 @@ Props:
 Hamburger menu icon.
 
 ```tsx
-import { HamburgerIcon } from "@ochub/ui";
+import { HamburgerIcon } from "@opencampus/ochub-ui";
 
 <HamburgerIcon className="h-6 w-6" />;
 ```
@@ -378,7 +378,7 @@ npx tailwindcss init -p
 export default {
   content: [
     "./src/**/*.{js,jsx,ts,tsx}",
-    "node_modules/@ochub/ui/dist/**/*.{js,jsx,ts,tsx}",
+    "node_modules/@opencampus/ochub-ui/dist/**/*.{js,jsx,ts,tsx}",
   ],
 };
 ```
@@ -400,7 +400,7 @@ export default {
 
 ```tsx
 // app/layout.tsx
-import { AppShell, TopBar } from "@ochub/ui";
+import { AppShell, TopBar } from "@opencampus/ochub-ui";
 
 export default function RootLayout({ children }) {
   return (
@@ -433,7 +433,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
 
 ```tsx
 // App.tsx
-import { TopBar, BottomNav } from "@ochub/ui";
+import { TopBar, BottomNav } from "@opencampus/ochub-ui";
 
 function App() {
   return (
@@ -449,7 +449,7 @@ function App() {
 
 ```tsx
 // App.tsx
-import { TopBar, BottomNav } from "@ochub/ui";
+import { TopBar, BottomNav } from "@opencampus/ochub-ui";
 
 function App() {
   return (
@@ -470,7 +470,7 @@ export default App;
 Full TypeScript support with exported types:
 
 ```tsx
-import { BackButton, BottomNav, ochubTheme, type OchubTheme } from "@ochub/ui";
+import { BackButton, BottomNav, ochubTheme, type OchubTheme } from "@opencampus/ochub-ui";
 
 // Type-safe theme
 const colors: OchubTheme["colors"] = ochubTheme.colors;
@@ -502,7 +502,7 @@ Proprietary - Open Campus Hub
 
 ## Support
 
-For issues or questions about `@ochub/ui`, contact the Open Campus development team.
+For issues or questions about `@opencampus/ochub-ui`, contact the Open Campus development team.
 
 ---
 
